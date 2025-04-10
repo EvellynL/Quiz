@@ -5,6 +5,7 @@ import { QuizContext } from './context/quiz'
 import Questions from './components/Questions'
 import { useContext, useEffect } from 'react'
 import GameOver from './components/GameOver'
+import PickCategory from './components/PickCategory'
 
 function App() {
   const [quizState, dispatch] = useContext(QuizContext);
@@ -20,6 +21,7 @@ function App() {
         {quizState.gameStage === "Start" && <Welcome/>}
         {quizState.gameStage === "Playing" && <Questions/>}
         {quizState.gameStage === "End" && <GameOver/>}
+        {quizState.gameStage === "Category" && <PickCategory/>}
       </div>
     </>
   )
