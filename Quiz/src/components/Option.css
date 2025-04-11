@@ -25,3 +25,7 @@
     background-color: #3c07e0;
     opacity: 0.4;
 }
+
+.hide {
+    display: none;
+}
