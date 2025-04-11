@@ -6,6 +6,12 @@ import "./PickCategory.css"
 const PickCategory = () => {
     const [quizState, dispatch] = useContext(QuizContext);
 
+    const chooseCategoryAndReoderQuestions = (category) => {
+      dispatch({type: "START_GAME", payload: category});
+
+      dispatch({type: "REODER_QUESTIONS"});
+    }
+
   return (
     <div id = "category">
         <h2>Escolha uma categoria</h2>
